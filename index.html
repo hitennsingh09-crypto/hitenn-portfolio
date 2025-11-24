@@ -760,14 +760,14 @@
 
     <!-- About Section -->
     <section class="about" id="about">
-        <div class="about-content scroll-reveal-left">
+        <div class="about-content scroll-reveal-left"> 
             <h2 class="section-title">ABOUT ME</h2>
             <p class="about-text">
                 I'm Hitenn Singh an actor, a
                 storyteller, and a dreamer who believes in the magic of cinema. Whether it's making people laugh, cry,
                 or sit at the edge of their seats,I love entertaining in every possible way. From action to romance,
                 comedy to intense drama - I enjoy pushing my boundaries and bringing something fresh to the
-                screen every time.
+                screen every time. 
             </p>
         </div>
         <div class="about-images scroll-reveal-right">
@@ -780,22 +780,98 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+        <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="portfolio-header scroll-reveal">
             <h2 class="section-title" style="display: inline-block;">PORTFOLIO</h2>
         </div>
 
-        <!-- Video Showreel -->
-        <div class="video-container scroll-reveal">
+        <!-- Common CSS Wrapper -->
+        <style>
+            .video-box {
+                width: 100%;
+                max-width: 900px;             /* Same for ALL videos */
+                margin: 40px auto;            /* Gap between videos */
+                border: 4px solid #b29559;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+            .video-box .video-wrapper {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 16/9;           /* Perfect YouTube landscape */
+                cursor: pointer;
+                background-size: cover;
+                background-position: center;
+            }
+            .video-box .play-btn {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 90px;
+                color: rgba(255,255,255,0.9);
+            }
+        </style>
+
+        <!-- Video Showreel YOUTUBE intro -->
+        <div class="video-box scroll-reveal">
             <div class="video-wrapper"
-                style="background: url('https://img.youtube.com/vi/R5HRXHbg0dQ/hqdefault.jpg') center/cover; cursor: pointer;"
+                style="background-image: url('https://img.youtube.com/vi/R5HRXHbg0dQ/hqdefault.jpg');"
                 onclick="window.open('https://youtu.be/R5HRXHbg0dQ?si=KBZESu52_AtyNdgJ', '_blank')">
-                <div
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: rgba(255,255,255,0.9);">
-                    ▶</div>
+                <div class="play-btn">▶</div>
             </div>
         </div>
+
+        <!-- Video Showreel GOOGLE DRIVE hariraj-->
+        <div class="video-box scroll-reveal">
+            <div class="video-wrapper"
+                style="background-image: url('intro1.png');"
+                onclick="window.open('https://drive.google.com/file/d/1o6nM9DS9EQoTGvDVZS1_SR19i0wvI_9J/view?usp=drive_link', '_blank')">
+                <div class="play-btn">▶</div>
+            </div>
+        </div>
+
+        <!-- Video Showreel GOOGLE DRIVE hariraj -->
+        <div class="video-box scroll-reveal">
+            <div class="video-wrapper"
+                style="background-image: url('intro1.png');"
+                onclick="window.open('https://drive.google.com/file/d/1hJebvPsbwfj55yE2woYU9kBQdD5eAs89/view?usp=drive_link', '_blank')">
+                <div class="play-btn">▶</div>
+            </div>
+        </div>
+ 
+
+        <!-- Video Showreel GOOGLE DRIVE hariraj -->
+        <div class="video-box scroll-reveal">
+            <div class="video-wrapper"
+                style="background-image: url('intro1.png');"
+                onclick="window.open('https://drive.google.com/file/d/1371Pp_P0Q8SdjYliMsepY4xqZQoMzBIV/view?usp=sharing', '_blank')">
+                <div class="play-btn">▶</div> 
+            </div>
+        </div>
+
+
+        <!-- Video Showreel GOOGLE DRIVE co-ed -->
+        <div class="video-box scroll-reveal">
+            <div class="video-wrapper"
+                style="background-image: url('co-ed.png');"
+                onclick="window.open('https://drive.google.com/file/d/1d74rB_SjDzLSBOx-qrx0So3Pp_6wrsXI/view?usp=sharing', '_blank')">
+                <div class="play-btn">▶</div> 
+            </div>
+        </div> 
+
+
+        <!-- Video Showreel GOOGLE DRIVE co-ed -->
+        <div class="video-box scroll-reveal">
+            <div class="video-wrapper"
+                style="background-image: url('co-ed.png');"
+                onclick="window.open('https://drive.google.com/file/d/15kdW7qlWbcua143vbwgw6JzgGIbuOY2l/view?usp=sharing', '_blank')">
+                <div class="play-btn">▶</div> 
+            </div>
+        </div> 
+
+
 
         <!-- Image Carousel -->
         <div class="carousel scroll-reveal">
@@ -864,9 +940,9 @@
     <!-- Footer -->
     <footer>
         <p>Copyright © All Rights Reserved.</p>
-    </footer>
+    </footer> 
 
-    <script>
+    <script> 
         // Carousel functionality
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-slide');
@@ -980,13 +1056,14 @@
             submitBtn.disabled = true;
 
             try {
-                const response = await fetch('https://formspree.io/f/mgvpdyyj', {
+                const response = await fetch('https://formspree.io/f/mgvpdyyj', { 
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: JSON.stringify(formData)
+                    body: JSON.stringify(formData) 
+
                 });
 
                 if (response.ok) {
